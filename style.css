@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  background: blacksmoke;
+  background: whitesmoke;
   overflow-x: hidden;
   font-family: Verdana, sans-serif;
   font-size: 1rem;
@@ -36,7 +36,7 @@ body {
 .navigation-container {
   position: fixed;
   top: -20px;
-  border-top: 20px solid whitesmoke;
+  border-top: 20px solid blacksmoke;
 }
 
 .navigation-items {
@@ -48,7 +48,7 @@ body {
   position: fixed;
   right: 0;
   width: 100%;
-  background: whitesmoke;
+  background: blacksmoke;
   height: 60px;
   z-index: -1;
 }
