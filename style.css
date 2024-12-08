@@ -1,20 +1,20 @@
-/*html, * {
+html, * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}*/
+}
 
 :root {
-  --background-color-light: whitesmoke; 
+  --background-color-light: whitesmoke;
   --text-color-light: #000000;
   --background-color-dark: #121212;
   --text-color-dark: #ffffff;
 }
 
 body {
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
   margin: 0;
+  background: var(--background-color-light);
+  color: var(--text-color-light);
   overflow-x: hidden;
   font-family: Verdana, sans-serif;
   font-size: 1rem;
@@ -22,9 +22,10 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: var(--background-color-dark);
+    background: var(--background-color-dark);
     color: var(--text-color-dark);
   }
 
@@ -35,10 +36,6 @@ body {
   .card {
     background-color: #333;
     color: var(--text-color-dark);
-  }
-
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
   }
 
   .save-confirmed {
@@ -59,11 +56,12 @@ body {
   align-items: center;
   margin-top: 5px;
   margin-bottom: 25px;
+  padding: 0 15px; /* Added padding for better layout */
 }
 
 /* Loader */
 .loader {
-  background: whitesmoke;
+  background: var(--background-color-light);
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -78,7 +76,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  border-top: 20px solid whitesmoke;
+  border-top: 20px solid var(--background-color-light);
   background-color: var(--background-color-light);
   z-index: 5;
 }
@@ -92,11 +90,12 @@ body {
   position: fixed;
   right: 0;
   width: 100%;
-  background: white;
+  background: var(--background-color-light);
   height: 60px;
   z-index: -1;
 }
 
+/* Clickable Links */
 .clickable {
   color: dodgerblue;
   cursor: pointer;
@@ -114,7 +113,7 @@ body {
 }
 
 .card {
-  background: whitesmoke;
+  background: var(--background-color-light);
   margin: 10px 10px 20px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -142,7 +141,7 @@ body {
 
 /* Save Confirmation */
 .save-confirmed {
-  background: white;
+  background: var(--background-color-light);
   padding: 8px 16px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -178,4 +177,3 @@ body {
     right: 25px;
   }
 }
-
