@@ -1,11 +1,11 @@
-html, * {
+/*html, * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
+}*/
 
 :root {
-  --background-color-light: whitesmoke; /* Light mode background */
+  --background-color-light: whitesmoke; 
   --text-color-light: #000000;
   --background-color-dark: #121212;
   --text-color-dark: #ffffff;
