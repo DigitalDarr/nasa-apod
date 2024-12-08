@@ -1,4 +1,4 @@
-const resultsNav = document.getElementById('resultsNav');
+const resultsNav = document.getElementById('resultsNav'); 
 const favoritesNav = document.getElementById('favoritesNav');
 const imagesContainer = document.querySelector('.images-container');
 const saveConfirmed = document.querySelector('.save-confirmed');
@@ -10,7 +10,7 @@ const apiKey = 'f72wxXQjKPsSOzhR5oMGrlKWsl3zpg9o5tS13J68';
 const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`;
 
 let resultsArray = [];
-let favorites = {};
+let favorites = JSON.parse(localStorage.getItem('nasaFavorites')) || {};
 
 // Scroll To Top, Remove Loader, Show Content
 function showContent(page) {
@@ -83,12 +83,8 @@ function createDOMNodes(page) {
 }
 
 function updateDOM(page) {
-  // Get Favorites from localStorage
-  if (localStorage.getItem('nasaFavorites')) {
-    favorites = JSON.parse(localStorage.getItem('nasaFavorites'));
-  }
   // Reset DOM, Create DOM Nodes, Show Content
-  imagesContainer.textContent = '';
+  imagesContainer.innerHTML = '';  // Clears the images container
   createDOMNodes(page);
   showContent(page);
 }
@@ -102,7 +98,9 @@ async function getNasaPictures() {
     resultsArray = await response.json();
     updateDOM('results');
   } catch (error) {
-    // Catch Error Here
+    console.error('Error fetching NASA pictures:', error);
+    alert('Failed to load images. Please try again later.');
+    loader.classList.add('hidden');
   }
 }
 
@@ -123,11 +121,7 @@ function saveFavorite(itemUrl) {
   });
 }
 
-//DarkMode toggsle
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-}
-
+// DarkMode toggle
 function toggleDarkMode() {
   let isDark = document.body.classList.toggle('dark-mode');
   localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
@@ -139,7 +133,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.body.classList.add('dark-mode');
   }
 });
-
 
 // Remove item from Favorites
 function removeFavorite(itemUrl) {
