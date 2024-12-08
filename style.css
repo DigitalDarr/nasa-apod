@@ -1,5 +1,11 @@
+html, * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root {
-  --background-color-light: #ffffff;
+  --background-color-light: whitesmoke; /* Light mode background */
   --text-color-light: #000000;
   --background-color-dark: #121212;
   --text-color-dark: #ffffff;
@@ -15,86 +21,28 @@ body {
   line-height: 1.8rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
   }
-}
 
-/* html {
-  box-sizing: border-box;
-}
-*/
-/*:root {
-  --background-color-light: #ffffff;
-  --text-color-light: #000000;
-  --background-color-dark: #121212;
-  --text-color-dark: #ffffff;
-}*/
-
-/*body {
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
-  margin: 0;
-  overflow-x: hidden;
-  font-family: Verdana, sans-serif;
-  font-size: 1rem;
-  line-height: 1.8rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-} */
-
-
-/*@media (prefers-color-scheme: dark) {
-  body {
+  .container, .navigation-container, .background {
     background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-    margin: 0;
-    overflow-x: hidden;
-    font-family: Verdana, sans-serif;
-    font-size: 1rem;
-    line-height: 1.8rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
   }
-}*/
 
-/* body {
-  margin: 0;
-  background-color: whitesmoke;
-  overflow-x: hidden;
-  font-family: Verdana, sans-serif;
-  font-size: 1rem;
-  line-height: 1.8rem;
-} */
+  .card, .save-confirmed {
+    background-color: #333;
+    color: var(--text-color-dark);
+  }
 
-/*.dark-mode {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-}*/
-
-/*dark mode codes*/
-
-/*
-:root {
-  --background-color-light: #ffffff;
-  --text-color-light: #000000;
-  --background-color-dark: #121212;
-  --text-color-dark: #ffffff;
+  .card:hover, .save-confirmed:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+  }
 }
 
-body {
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
-}
-
-.dark-mode {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-}
-*/
-
+/* Container */
 .container {
   position: relative;
   display: flex;
