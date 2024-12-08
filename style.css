@@ -11,13 +11,12 @@ html {
 
 body {
   margin: 0;
-  background: whitesmoke;
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
   overflow-x: hidden;
   font-family: Verdana, sans-serif;
   font-size: 1rem;
   line-height: 1.8rem;
-  background-color-dark: #121212;
-  text-color-dark: #ffffff;
 }
 
 .dark-mode {
