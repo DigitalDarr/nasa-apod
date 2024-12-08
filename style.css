@@ -5,7 +5,6 @@
   --text-color-dark: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
 body {
   background-color: var(--background-color-light);
   color: var(--text-color-light);
@@ -17,10 +16,12 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dark-mode {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
 }
 
 /* html {
