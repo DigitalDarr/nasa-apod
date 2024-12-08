@@ -2,6 +2,13 @@ html {
   box-sizing: border-box;
 }
 
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --background-color-dark: #121212;
+  --text-color-dark: #ffffff;
+}
+
 body {
   margin: 0;
   background: whitesmoke;
