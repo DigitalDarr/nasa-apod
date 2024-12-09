@@ -81,11 +81,25 @@ body {
   z-index: 5;
 }
 
-.navigation-items {
+/*.navigation-items {
   display: flex;
   justify-content: center;
   width: 100%;
 }
+*/
+.navigation-items {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+.navigation-items a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: black;
+    }
 
 .background {
   position: fixed;
