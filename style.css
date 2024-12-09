@@ -89,7 +89,7 @@ body {
 
 .navigation-items {
   display: flex;
-  justify-content: center;
+}
 
 /*.navigation-items {
   display: flex;
