@@ -8,7 +8,7 @@ html, * {
   --background-color-light: whitesmoke;
   --text-color-light: #000000;
   --background-color-dark: #121212;
-  --text-color-dark: #ffffff;
+  --text-color-dark: #000000;
 }
 
 body {
@@ -84,6 +84,7 @@ body {
 .navigation-items {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .background {
