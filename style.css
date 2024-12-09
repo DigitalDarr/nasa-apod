@@ -82,45 +82,6 @@ body {
   display: flex;
 }
 
-/* border-top: 20px solid var(--background-color-light);
-background-color: var(--background-color-light);
-  z-index: 5;
-*/
-/*.navigation-container {
-  position: fixed;
-  top: -20px;
-  border-top: 20px solid whitesmoke;
-}*/
-
-/*.navigation-items {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-*/
-/*.navigation-items {
-      display: flex;
-      justify-content: center;
-      background-color: white;
-      padding: 0px;
-      border: 1px solid #ccc;
-    }*/
-
-/*.navigation-items a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: black;
-    } */
-
-.background {
-  position: fixed;
-  right: 0;
-  width: 100%;
-  background: var(--background-color-light);
-  height: 60px;
-  z-index: -1;
-}
-
 /* Clickable Links */
 .clickable {
   color: dodgerblue;
