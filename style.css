@@ -78,6 +78,10 @@ body {
   width: 100%;
 }
 
+.navigation-items {
+  display: flex;
+}
+
 /* border-top: 20px solid var(--background-color-light);
 background-color: var(--background-color-light);
   z-index: 5;
@@ -87,10 +91,6 @@ background-color: var(--background-color-light);
   top: -20px;
   border-top: 20px solid whitesmoke;
 }*/
-
-.navigation-items {
-  display: flex;
-}
 
 /*.navigation-items {
   display: flex;
@@ -188,7 +188,7 @@ background-color: var(--background-color-light);
   body {
     line-height: 1.4rem;
     font-size: 0.9rem;
-    text-align: justify;
+    text-align: center;
   }
 
   .images-container {
