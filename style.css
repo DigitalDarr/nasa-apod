@@ -22,6 +22,8 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+ background-image: url('nasa.bg.png');
+
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
@@ -76,6 +78,7 @@ body {
   position: center;
   top: 0;
   width: 100%;
+  background: black;
 }
 
 .navigation-items {
