@@ -72,23 +72,40 @@ body {
   align-items: center;
 }
 
+
+/* NASA Logo */
+.nasa-logo {
+  height: 50px; 
+}
+
+
+.nav-buttons {
+  display: flex; 
+  gap: 15px; 
+}
+
 /* Navigation */
 .navigation-container {
-  position: center;
-  top: 0;
-  width: 100%;
-  background: black;
+  display: flex; 
+  justify-content: space-between; 
+  width: 100%; 
+  align-items: center;
+  padding: 18px 0; 
+  transition: 0.32s ease-in-out; 
 }
 
 .navigation-items {
-  display: flex;
-  padding: 18px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 9999;
-  transition:  0.32s ease-in-out;
+  display: flex; 
+  justify-content: space-between; 
+  width: 100%; 
   align-items: center;
+  padding: 18px 0; 
+  transition: 0.32s ease-in-out;
+{
+
+ .nav-buttons {
+  display: flex; 
+  gap: 15px; 
 }
 
 /* Clickable Links */
@@ -96,6 +113,11 @@ body {
   color: dodgerblue;
   cursor: pointer;
   user-select: none;
+  padding: 10px 20px; 
+  border: none; 
+  background: transparent;  
+  font-size: 16px; 
+  transition: color 0.3s ease-in-out;
 }
 
 .clickable:hover {
