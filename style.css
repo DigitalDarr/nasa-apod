@@ -1,7 +1,5 @@
-html, * {
- /* box-sizing: border-box; */
-  padding: 0;
-  margin: 0;
+html {
+  box-sizing: border-box;
 }
 
 :root {
@@ -26,12 +24,7 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     background: var(--background-color-dark);
-   background-image: url('nasa.bg.png');
     color: var(--text-color-dark);
-  }
-
-  .container, .navigation-container, .background {
-    background-color: var(--background-color-dark);
   }
 
   .card {
@@ -49,20 +42,20 @@ body {
   }
 }
 
-/* Container */
+/* Contanier */
 .container {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5px;
   margin-bottom: 25px;
-  padding: 0 15px; /* Added padding for better layout */
+  margin-top: 5px;
+  padding: 0;
 }
 
 /* Loader */
 .loader {
-  background: var(--background-color-light);
+  background: lightblue;
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -72,55 +65,41 @@ body {
   align-items: center;
 }
 
-
 /* NASA Logo */
 .nasa-logo {
   height: 50px; 
 }
 
-
-.nav-buttons {
-  display: flex; 
-  gap: 15px; 
-}
-
 /* Navigation */
 .navigation-container {
-  position: fixed; 
-  top: 0;
-  width: 100%;
-  background: black;
-  z-index: 9999;
+  position: fixed;
+  top: -20px;
+  border-top: 10px solid transparent; 
   display: flex;
   align-items: center;
-  padding: 0 20px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  justify-content: space-between; 
+  padding: 0;
+  transition: background-color 0.3s ease;
 }
 
 .navigation-items {
-  display: flex; 
-  justify-content: space-between; 
-  width: 100%; 
-  align-items: center;
-  padding: 18px 0; 
-  transition: 0.32s ease-in-out;
-{
-
- .nav-buttons {
-  display: flex; 
-  gap: 15px; 
+  display: flex;
+  gap: 10px;
 }
 
-/* Clickable Links */
+.background {
+  position: fixed;
+  right: 0;
+  width: 100%;
+  background: lightblue;
+  height: 60px;
+  z-index: -1;
+}
+
 .clickable {
   color: dodgerblue;
   cursor: pointer;
   user-select: none;
-  padding: 10px 20px; 
-  border: none; 
-  background: transparent;  
-  font-size: 16px; 
-  transition: color 0.3s ease-in-out;
 }
 
 .clickable:hover {
@@ -134,7 +113,7 @@ body {
 }
 
 .card {
-  background: var(--background-color-light);
+  background: lightblue;
   margin: 10px 10px 20px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -162,7 +141,7 @@ body {
 
 /* Save Confirmation */
 .save-confirmed {
-  background: var(--background-color-light);
+  background: white;
   padding: 8px 16px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -170,7 +149,6 @@ body {
   position: fixed;
   bottom: 25px;
   right: 50px;
-  color: #333;
 }
 
 /* Hidden */
@@ -183,7 +161,7 @@ body {
   body {
     line-height: 1.4rem;
     font-size: 0.9rem;
-    text-align: center;
+    text-align: justify;
   }
 
   .images-container {
